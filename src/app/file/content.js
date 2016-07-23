@@ -2,7 +2,6 @@ import path from 'path';
 import fs from 'fs';
 import zlib from 'zlib';
 
-import parseLess from './../parse/less';
 import config from './../config';
 import dir from './dir';
 

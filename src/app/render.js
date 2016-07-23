@@ -1,6 +1,6 @@
 import fileInfo from './info';
 import fileContent from './content';
-import setting from './../../setting';
+import setting from './../setting';
 import dir from './dir';
 import url from 'url';
 import fs from 'fs';

@@ -2,7 +2,7 @@ import path from 'path';
 import fs from 'fs';
 import zlib from 'zlib';
 
-import config from './../config';
+import config from './config';
 import dir from './dir';
 
 let mimes = config.mimes;

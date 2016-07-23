@@ -1,7 +1,7 @@
 import http from 'http';
 import fs from 'fs';
 import setting from './setting';
-import Render from './app/file/render';
+import Render from './app/render';
 
 
 let server = http.createServer(function( req, res ){

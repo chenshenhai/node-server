@@ -3,7 +3,7 @@ import path from 'path';
 import fs from 'fs';
 import url from 'url';
 
-import setting from './../../setting';
+import setting from './../setting';
 import fileInfo from './info';
 import fileContent from './content';
 import walk from './walk';

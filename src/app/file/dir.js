@@ -1,14 +1,4 @@
 //处理目录路径
-// let path = require("path");
-// let fs = require("fs");
-// let url = require("url");
-
-// let setting = require("../../setting");
-// let fileInfo = require("./info");
-// let fileContent = require("./content");
-// let walk = require("./walk");
-
-
 import path from 'path';
 import fs from 'fs';
 import url from 'url';

@@ -139,4 +139,4 @@ function fileContent( req, res, filePath, extName, fileBasePath, filename  ) {
     }
 }
 
-module.exports = fileContent;
+export default fileContent;

@@ -1,3 +1,7 @@
+/*
+ * 处理文件信息
+ */
+
 import path from 'path';
 import url from 'url';
 import os from 'os';

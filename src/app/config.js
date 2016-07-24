@@ -1,3 +1,7 @@
+/*  
+ × 配置文件    
+ */
+
 //页面类型
 let mimes = {
     "css": "text/css",

@@ -1,3 +1,7 @@
+/*
+ * 访问文件内容
+ */
+
 import path from 'path';
 import fs from 'fs';
 import zlib from 'zlib';

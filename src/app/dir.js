@@ -1,4 +1,7 @@
-//处理目录路径
+/*
+ * 处理目录路径
+ */
+ 
 import path from 'path';
 import fs from 'fs';
 import url from 'url';

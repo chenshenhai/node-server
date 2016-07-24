@@ -1,3 +1,7 @@
+/*
+ * 访问渲染处理
+ */
+
 import fileInfo from './info';
 import fileContent from './content';
 import setting from './../setting';

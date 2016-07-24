@@ -1,3 +1,7 @@
+/*
+ * 遍历目录
+ */
+
 import fs from 'fs';
 import config from './config';
 const mimes = config.mimes;

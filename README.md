@@ -1,4 +1,13 @@
 # 基于 ES6 开发的静态服务器
+配置静态资源目录，没有配置是默认静态资源是项目的assets目录下
+```js
+let setting = {
+    "workspace" : "", // 静态资源路径
+    "port" : 5000
+}
+
+export default setting;
+```
 
 ``` sh
 #安装依赖

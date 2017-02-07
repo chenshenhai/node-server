@@ -1,5 +1,5 @@
 # 基于 ES6 开发的静态服务器
-在src/settig.js配置静态资源目录 ，如果没有配置是默认静态资源是项目的asset目录下
+在src/setting.js配置静态资源目录 ，如果没有配置是默认静态资源是项目的asset目录下
 ```js
 let setting = {
     "workspace" : "", // 静态资源路径

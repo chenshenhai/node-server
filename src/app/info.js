@@ -2,45 +2,44 @@
  * 处理文件信息
  */
 
-import path from 'path';
-import url from 'url';
-import os from 'os';
+const path = require('path');
+const url = require('url');
+const os = require('os');
 
+let getFileInfo = function (req, res, workspace) {
+  let pathResolve = workspace;
+  if (!pathResolve) {
+    pathResolve = path.resolve().replace(/\\/, '/') + '/asset';
+  }
+  let pathname = url.parse(req.url).pathname;
 
-let getFileInfo = function  ( req ,  res,  workspace) {
-    let pathResolve = workspace;
-    if( !pathResolve  ) {
-        pathResolve = path.resolve().replace(/\\/, "/") + "/asset";
-    }
-    let pathname = url.parse(req.url).pathname;
+  let filePath = pathResolve + pathname;
+  let pathArr = filePath.split('\/');
 
-    let filePath = pathResolve + pathname;
-    let pathArr = filePath.split("\/");
-   
-    let fileName = pathArr[ pathArr.length - 1 ],
-    basePath = pathArr.slice( 0, pathArr.length - 1).join("/");
-    
-    let extName = path.extname( filePath );
-    extName = extName ?  extName.slice(1) : 'unknown';
+  let fileName = pathArr[ pathArr.length - 1 ];
+  let basePath = pathArr.slice(0, pathArr.length - 1).join('/');
 
-    //判断操作平台
+  let extName = path.extname(filePath);
+  extName = extName ? extName.slice(1) : 'unknown';
 
-    let platform = os.platform();
+  // 判断操作平台
 
-    if( platform === "win32" ) {
-        basePath = basePath.replace(/\//g, "\\");
-        filePath = filePath.replace(/\//g, "\\");
-    } else {
-        basePath = basePath.replace(/\\/g, "\/");
-        filePath = filePath.replace(/\\/g, "\/");
-    }    
+  let platform = os.platform();
 
-    return {
-        "basePath" : basePath,
-        "filePath" : filePath,
-        "fileName" : fileName,
-        "extName" : extName
-    };
-}
+  if (platform === 'win32') {
+    basePath = basePath.replace(/\//g, '\\');
+    filePath = filePath.replace(/\//g, '\\');
+  } else {
+    basePath = basePath.replace(/\\/g, '\/');
+    filePath = filePath.replace(/\\/g, '\/');
+  }
 
-export default getFileInfo;
+  return {
+    'basePath': basePath,
+    'filePath': filePath,
+    'fileName': fileName,
+    'extName': extName
+  };
+};
+
+module.exports = getFileInfo;

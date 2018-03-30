@@ -1,20 +1,23 @@
 {
   "name": "node-server",
-  "version": "0.0.1",
-  "description": "es6 node.js",
+  "version": "0.1.0",
+  "description": "a simple node.js server",
   "main": "index.js",
-  "scripts": {
-    "build": "babel --presets es2015 src/ --out-dir dist/",
-    "start": "npm run build && node dist/index.js",
-    "dev-start": "babel-node  --presets es2015   src/index.js"
+  "scripts": { 
+    "start": "node src/index.js", 
+    "fix": "./node_modules/.bin/eslint --fix --ext .js ./"
   },
-  "author": "",
+  "author": "chenshenhai",
   "license": "MIT",
   "devDependencies": {
-    "babel-core": "^6.10.4",
-    "babel-plugin-transform-runtime": "^6.9.0",
-    "babel-preset-es2015": "^6.9.0",
-    "babel-preset-es2015-loose": "^7.0.0",
-    "babel-preset-stage-1": "^6.5.0"
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1"
+  },
+  "engines": {
+    "node": ">= 8.0.0"
   }
 }

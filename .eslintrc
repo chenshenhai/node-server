@@ -1,0 +1,9 @@
+
+{
+  "extends": "eslint-config-standard",
+  "rules" : {
+    "no-unused-vars": 1,
+    "semi": ["error", "always"],
+    "no-useless-escape": 0
+  }
+}

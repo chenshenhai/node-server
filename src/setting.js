@@ -1,6 +1,6 @@
 let setting = {
-    "workspace" : "",
-    "port" : 5000
-}
+  'workspace': '',
+  'port': 5000
+};
 
-export default setting;
+module.exports = setting;
